@@ -142,7 +142,9 @@ Lưu ý: Servo cần nguồn ngoài ít nhất 5V để hoạt động ổn đ�
 ## Mã của dự án NodeRED
 File json để import vào Node-Red: [Node-red/flows.json](Node-red/flows.json)
 - Copy bằng cách: Tải về hoặc copy code trong file sau đó vào trang Node-Red -> biểu tượng cài đặt 3 dấu gạch ngang góc trên bên phải -> Import -> Paste code hoặc load file json vừa tải về lên -> Nhấn Import.
-
+- Lưu ý: Hãy tải palette node-red-dashboard trong cài đặt -> Manage palette -> Palette -> Install để tải về các node gồm có Gauge, Chart và text sử dụng trong dự án.
+- Nếu muốn khởi động lại Node-RED và chạy lại flow cũ với thư mục cụ thể đã tạo lúc đầu, dùng lệnh: node-red --userDir /path/to/folder (thay bằng đường dẫn đến thư mục chứa flow.json)
 
 > Nếu bạn muốn thử — hãy clone repo này và chạy theo hướng dẫn. Mình luôn hoan nghênh pull-request để mở rộng dự án 😊
+
 
