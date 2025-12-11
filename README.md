@@ -145,3 +145,4 @@ File json để import vào Node-Red: [Node-red/flows.json](Node-red/flows.json)
 
 
 > Nếu bạn muốn thử — hãy clone repo này và chạy theo hướng dẫn. Mình luôn hoan nghênh pull-request để mở rộng dự án 😊 
+
