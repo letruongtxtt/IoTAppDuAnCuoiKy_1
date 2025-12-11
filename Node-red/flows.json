@@ -1,0 +1,478 @@
+[
+    {
+        "id": "59d09839c799792a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b78e8f73e4f2ab45",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "isrgrootx1.pem",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "cf62553f23d8e540",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "30b0d1b821d348d4bddd7d27004d7548.s1.eu.hivemq.cloud:8883",
+        "port": "8883",
+        "tls": "b78e8f73e4f2ab45",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "79082d8ff36fdeb4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "28463c19ec08ff5b",
+        "type": "ui_tab",
+        "name": "Điều khiển rèm cửa tự động dựa theo thời tiết",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5b183e296ff71e6b",
+        "type": "ui_group",
+        "name": "Rain",
+        "tab": "28463c19ec08ff5b",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "07eed4742c3c5147",
+        "type": "ui_group",
+        "name": "Light",
+        "tab": "28463c19ec08ff5b",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b11ac08f12718ed5",
+        "type": "ui_group",
+        "name": "Curtain",
+        "tab": "28463c19ec08ff5b",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7607aabfc41772fb",
+        "type": "ui_group",
+        "name": "Rain analog",
+        "tab": "28463c19ec08ff5b",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2f0f5822086ea6ed",
+        "type": "mqtt in",
+        "z": "59d09839c799792a",
+        "name": "",
+        "topic": "home/rain",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "cf62553f23d8e540",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "9a7383c1e2288f60"
+            ]
+        ]
+    },
+    {
+        "id": "3a9fec806e16e62d",
+        "type": "mqtt in",
+        "z": "59d09839c799792a",
+        "name": "",
+        "topic": "home/light",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "cf62553f23d8e540",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 320,
+        "wires": [
+            [
+                "a004bb2b06f0d2fe",
+                "440799dce9e1fb5f"
+            ]
+        ]
+    },
+    {
+        "id": "24f57d203b1a4261",
+        "type": "mqtt in",
+        "z": "59d09839c799792a",
+        "name": "",
+        "topic": "home/curtain",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "cf62553f23d8e540",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 440,
+        "wires": [
+            [
+                "2b0fe4381ef0c46c"
+            ]
+        ]
+    },
+    {
+        "id": "1ff70c601b195d53",
+        "type": "mqtt in",
+        "z": "59d09839c799792a",
+        "name": "",
+        "topic": "home/rainAnalog",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "cf62553f23d8e540",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 540,
+        "wires": [
+            [
+                "0494a982c84b2202",
+                "9bd897daf955df15"
+            ]
+        ]
+    },
+    {
+        "id": "9a7383c1e2288f60",
+        "type": "ui_text",
+        "z": "59d09839c799792a",
+        "group": "5b183e296ff71e6b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Mưa hay không ?",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 470,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a004bb2b06f0d2fe",
+        "type": "ui_gauge",
+        "z": "59d09839c799792a",
+        "name": "",
+        "group": "07eed4742c3c5147",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Cường độ ánh sáng",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4096",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "1500",
+        "seg2": "",
+        "diff": true,
+        "className": "",
+        "x": 480,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "440799dce9e1fb5f",
+        "type": "ui_chart",
+        "z": "59d09839c799792a",
+        "name": "",
+        "group": "07eed4742c3c5147",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Cường độ a/s theo thời gian",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "5000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 500,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b0fe4381ef0c46c",
+        "type": "ui_text",
+        "z": "59d09839c799792a",
+        "group": "b11ac08f12718ed5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Rèm cửa:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 440,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "0494a982c84b2202",
+        "type": "ui_gauge",
+        "z": "59d09839c799792a",
+        "name": "",
+        "group": "7607aabfc41772fb",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Giá trị analog của rain sensor",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4096",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": true,
+        "className": "",
+        "x": 500,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "9bd897daf955df15",
+        "type": "ui_chart",
+        "z": "59d09839c799792a",
+        "name": "",
+        "group": "7607aabfc41772fb",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Đồ thị theo thời gian",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "4096",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 480,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    }
+]
