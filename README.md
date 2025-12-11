@@ -83,8 +83,8 @@ Lưu ý: Servo cần nguồn ngoài ít nhất 5V để hoạt động ổn đ�
 ##  Hướng dẫn sử dụng / Cài đặt
 
 ### 1. Firmware (ESP32)  
-- Mở `platformio.ini` + `main.cpp`.  
-- Cập nhật WiFi SSID + mật khẩu wifi bạn đang sử dụng  
+- Mở `platformio.ini` + `main.cpp`, có thể thay đổi chân GPIO phù hợp với nhu cầu hiện tại và sơ đồ chân ở trên.  
+- Cập nhật WiFi SSID + mật khẩu wifi bạn đang sử dụng trong `main.cpp`.
 - Nếu dùng broker MQTT cần TLS (ví dụ cloud MQTT như HiveMQ Cloud của mình), đảm bảo thư viện `WiFiClientSecure` + cấu hình đúng TLS/CA. (CA Certificate nằm trong file isrgrootx1.pem) 
 - Upload chương trình lên ESP32.
 
@@ -145,3 +145,4 @@ File json để import vào Node-Red: [Node-red/flows.json](Node-red/flows.json)
 
 
 > Nếu bạn muốn thử — hãy clone repo này và chạy theo hướng dẫn. Mình luôn hoan nghênh pull-request để mở rộng dự án 😊
+
