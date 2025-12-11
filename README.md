@@ -140,19 +140,8 @@ Lưu ý: Servo cần nguồn ngoài ít nhất 5V để hoạt động ổn đ�
 
 ---
 ## Mã của dự án NodeRED
-File json để import vào Node-Red: [Node-red/flows.json](flows.json)
+File json để import vào Node-Red: [Node-red/flows.json](Node-red/flows.json)
 - Copy bằng cách: Tải về hoặc copy code trong file sau đó vào trang Node-Red -> biểu tượng cài đặt 3 dấu gạch ngang góc trên bên phải -> Import -> Paste code hoặc load file json vừa tải về lên -> Nhấn Import.
 
 
-> Nếu bạn muốn thử — hãy clone repo này và chạy theo hướng dẫn. Mình luôn hoan nghênh pull-request để mở rộng dự án 😊
-
-
-
-
-
-
-
-
-#   I o T A p p D u A n C u o i K y _ 1  
- #   I o T A p p D u A n C u o i K y _ 1  
- 
+> Nếu bạn muốn thử — hãy clone repo này và chạy theo hướng dẫn. Mình luôn hoan nghênh pull-request để mở rộng dự án 😊 
