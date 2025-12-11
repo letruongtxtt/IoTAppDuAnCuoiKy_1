@@ -33,15 +33,18 @@ Mục tiêu của dự án:
 \ | /
 \——→ [ESP32 (firmware)] ——→ MQTT Broker (HiveMQ Cloud) ——→ Node-RED flow (Cloud/Server) ——→ Node-RED Dashboard (PC, Smartphone)
 
-![Sơ đồ dự án](<Pic+Video\Sơ đồ ứng dụng dự án.png>)
+
+![Sơ đồ dự án](Pic+Video/Sododuan.png)
 
 ## Sơ đồ hệ thống
 - ESP32 đọc cảm biến → quyết định mở/đóng rèm → publish dữ liệu & trạng thái lên MQTT.  
 - Node-RED subscribe các topic, hiển thị lên Dashboard để người dùng theo dõi.
 
 ### Nối chân:
+
 #### Sơ đồ chân ESP32 sử dụng trong dự án:
-![ESP32ESP32 Doit Devkit V1 (30 pins)](Pic+Video\ESP32.png)
+
+![ESP32ESP32 Doit Devkit V1 (30 pins)](Pic+Video/ESP32-devkitV1.png)
 
 #### 1. Kết nối cảm biến mưa (Rain Sensor)
 | Thành phần   | Chân module  | Kết nối tới ESP32 / Nguồn |
@@ -68,7 +71,9 @@ Mục tiêu của dự án:
 | Servo 360° | VCC        | 5V nguồn ngoài                 |
 |            | GND        | GND chung với ESP32 + nguồn 5V |
 |            | PWM        | GPIO14 (D14)                   |
+
 Lưu ý: Servo cần nguồn ngoài ít nhất 5V để hoạt động ổn định và cần nối GND chung để tín hiệu PWM ổn định.
+
 #### 4. Đèn LED báo trạng thái
 3V3 → Điện trở 1kΩ → LED → GPIO5 (D5)
 | Thành phần | Kết nối                        | Ghi chú                    |
@@ -103,20 +108,20 @@ Lưu ý: Servo cần nguồn ngoài ít nhất 5V để hoạt động ổn đ�
 ##  Ảnh, Video & Kết quả (Demo)  
 
 - Ảnh mô hình mạch + ESP32 + cảm biến + servo
-![Sơ đồ mạch test thực tế](<Pic+Video/Sơ đồ mạch test thực tế.png>) 
+![Sơ đồ mạch test thực tế](Pic+Video/Machthucte.png) 
 - Ảnh Dashboard Node-RED hiển thị dữ liệu  
 ![NodeRed-Dashboard](Pic+Video/NR-Dashboard.png)
 - Video quay cảnh servo đóng/mở khi nắng hoặc mưa
 * Khi LED báo hiệu sáng -> tức là servo quay đóng rèm, và ngược lại.
 * Cảm biến mưa hoạt động dựa trên nguyên lý: Nước rơi vào board (tấm cảm biến) sẽ tạo ra môi trường dẫn điện -> quay servo đóng rèm
-<video controls src="Pic+Video\demo+testRainSensor.mp4" title="Demo + Test cảm biến mưa"></video>
+[demo+testRainSensor.mp4](Pic+Video/demo+testRainSensor.mp4)
 
 * Sử dụng nguồn sáng trong video là đèn để bàn, khi cho sát lại gần quang trở -> cường độ sáng tăng -> vượt qua mốc sẽ quay servo đóng rèm
-<video controls src="Pic+Video\testCds.mp4" title="Test quang trở CdS"></video>
+[testCds.mp4](Pic+Video/testCds.mp4)
 
 * Node-Red Dashboard thay đổi tương ứng với gia trị các cảm biến gửi về trong quá trình thử nghiệm -> hoạt động hiển thị đã như mong muốn
-<video controls src="Pic+Video\NR-Dashboard1.mp4" title="1. Hiển thị trên NRDashboard"></video>
-<video controls src="Pic+Video\NR-Dashboard2.mp4" title="2."></video>
+[NR-Dashboard1.mp4](Pic+Video/NR-Dashboard1.mp4),
+[NR-Dashboard2.mp4](Pic+Video/NR-Dashboard2.mp4)
 ---
 
 ##  Kết luận & Đánh giá  
